@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Formik, Form, Field } from 'formik';
-import * as chatActionCreators from './actions';
+import * as chatActionCreators from './actions/chatActionCreators';
 
 function App () {
   const { messages, error, isFetching } = useSelector(state => state.chat);

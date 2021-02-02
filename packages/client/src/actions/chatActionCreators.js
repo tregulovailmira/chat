@@ -19,7 +19,7 @@ export const getMessagesFail = (error) => ({
 
 export const newMessageAction = (data) => ({
   type: ACTION_TYPES.NEW_MESSAGE_ACTION,
-  pauload: { data }
+  payload: { data }
 });
 
 export const newMessageSuccess = (data) => ({

@@ -15,12 +15,12 @@ const CHAT_EVENTS = {
 
 socket.on(CHAT_EVENTS.NEW_MESSAGE, body => {
   const data = JSON.parse(body);
-  store.dispatdh(newMessageSuccess(data));
+  store.dispatch(newMessageSuccess(data));
 });
 
 socket.on(CHAT_EVENTS.NEW_MESSAGE_ERROR, error => {
   const err = JSON.parse(error);
-  store.dispatdh(newMessageFail(err));
+  store.dispatch(newMessageFail(err));
 });
 
 // http
@@ -31,5 +31,5 @@ export const getMessages = () => {
 };
 
 export const sendMessage = (data) => {
-  apiInstance.socket.emit(CHAT_EVENTS.NEW_MESSAGE, JSON.stringify(data))
-}
+  apiInstance.socket.emit(CHAT_EVENTS.NEW_MESSAGE, JSON.stringify(data));
+};

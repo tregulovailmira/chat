@@ -1,1 +1,1 @@
-module.exports = require('./message.controller');
+module.exports.messageController = require('./message.controller');

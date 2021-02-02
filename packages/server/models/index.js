@@ -16,9 +16,9 @@ const connectionCallback = err => {
     process.exit(1);
   }
 };
-mongoose.connect(`mongodb://${config.host}:${config.port}/${config.database}`, connectionOptions, connectionCallback);
+mongoose.connect(`mongodb+srv://admin:admin@cluster0.xfq1o.mongodb.net/${config.database}`, connectionOptions, connectionCallback);
 
-const fileRegExp = /^[^.].*?\.js$/;
+const fileRegExp = /^[^.].*?\.js$test/;
 
 const db = {};
 
